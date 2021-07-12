@@ -134,7 +134,7 @@ class Critic_LSTM(keras.Model):
         self.batch_size = params['batch_size']
         self.opt = keras.optimizers.Adam(lr= params['learning_rate'], global_clipnorm=params['gclip'])
         self.inputs = keras.Input(shape=(self.batch_size, 1, params['n_ctx']))
-        self.lstm = layers.LSTM(60)
+        self.lstm = layers.LSTM(60, stateful=True)
         self.prediction = layers.Dense(1, activation=params['value_act_function'])
 
 

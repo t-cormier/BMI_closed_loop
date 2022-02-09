@@ -1,3 +1,11 @@
+plots*/
+logs*/
+new_data_run/
+data_run/
+new_plots/
+data*/
+
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
